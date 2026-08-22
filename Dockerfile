@@ -7,5 +7,5 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 COPY . /app
 WORKDIR /app
 
-# Menjalankan server bawaan PHP yang langsung berinteraksi dengan port Railway
-CMD php -S 0.0.0.0:$PORT
+# Menjalankan server PHP dengan menangkap port dinamis dari Railway
+CMD php -S 0.0.0.0:${PORT:-8080}
