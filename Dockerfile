@@ -1,7 +1,10 @@
 FROM php:8.2-apache
 
-# Mengaktifkan ekstensi MySQLi
+# Mengaktifkan ekstensi MySQLi dan PDO
 RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+# Memperbaiki error konflik MPM Apache
+RUN a2dismod mpm_event mpm_worker && a2enmod mpm_prefork
 
 # Menyalin seluruh file project ke direktori web server Apache
 COPY . /var/www/html/
