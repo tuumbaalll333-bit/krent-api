@@ -1,9 +1,9 @@
 <?php
-$host = "trolley.proxy.rlwy.net";
+$host = "mysql.railway.internal";
 $user = "root";
-$pass = "QerLGuWHBhIQUmdenSbljbmekEwRjriV";
+$pass = "thiPTgOxUkpxLDSFjNYpnUmQohhEBxXk";
 $db   = "railway";
-$port = 39090;
+$port = 3306;
 
 $conn = new mysqli($host, $user, $pass, $db, $port);
 
