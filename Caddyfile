@@ -1,0 +1,6 @@
+﻿:8080 {
+    encode gzip
+    php_fastcgi unix//var/run/php/php-fpm.sock
+    file_server
+    try_files {path} /index.php
+}
