@@ -1,0 +1,5 @@
+:8080 {
+    php_fastcgi frankenphp:9000
+    file_server
+    try_files {path} /index.php
+}
